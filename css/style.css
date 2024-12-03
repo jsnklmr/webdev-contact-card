@@ -1,0 +1,106 @@
+/* Mobile-first design (for small screens like phones) */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.contact-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px; /* Soft corners for the profile image */
+    margin-bottom: 15px;
+}
+
+.contact-card h2 {
+    margin: 10px 0;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.contact-card p {
+    margin: 5px 0;
+    color: #fff;
+    font-size: 1em;
+}
+
+.contact-card .phone,
+.contact-card .company {
+    color: #1e3a8a; /* Navy text for phone and company */
+}
+
+.contact-card .email {
+    color: #38bdf8; /* Sky blue color for the email link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-card .email:hover {
+    text-decoration: underline;
+    color: #1e3a8a; /* Change color to navy on hover */
+}
+
+.contact-card .company:hover {
+    text-decoration: underline;
+    color: #1e3a8a; /* Change color to navy on hover */
+}
+
+/* Media Queries for larger screens */
+
+/* Tablet (up to 768px) */
+@media screen and (min-width: 600px) {
+    .contact-card {
+        width: 350px;
+    }
+    .contact-card h2 {
+        font-size: 1.6em;
+    }
+}
+
+/* Desktop (up to 1200px) */
+@media screen and (min-width: 900px) {
+    .contact-card {
+        width: 400px;
+    }
+    .contact-card h2 {
+        font-size: 1.8em;
+    }
+    .contact-card p {
+        font-size: 1.1em;
+    }
+}
+
+/* Large desktop (for larger screens) */
+@media screen and (min-width: 1200px) {
+    .contact-card {
+        width: 450px;
+    }
+    .contact-card h2 {
+        font-size: 2em;
+    }
+}
